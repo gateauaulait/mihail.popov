@@ -3,7 +3,7 @@ source:       .
 destination:  ./_site
 layouts_dir:  _layouts
 #baseurl: "/icpp22"
-baseurl: ""
+baseurl: "/mihail.popov"
 
 # Handling Reading
 exclude:              [
