@@ -1,31 +1,93 @@
-<!DOCTYPE html>
-<html manifest="site.manifest">
-<head>
-	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<link rel="apple-touch-icon" href="earth-folder.png">
-	<link rel="apple-touch-icon-precomposed" href="earth-folder.png">
-	<link rel="apple-touch-startup-image" href="earth-folder.png" />
-	
-	<style type="text/css">
-		#main{
-			width:900px;
-			margin:auto;
-		}
-	</style>
-</head>
-<body>
-	<div id="main">
-		<h1>Mihail Popov</h1>
-		<p> <a href="https://inria.fr">Inria</a> Research Scientist </p>
-		<p> <a href="https://team.inria.fr/storm/">STORM</a> team, Inria Bordeaux - Sud-Ouest </p>
-		<p> I am interested by parallelism, performance characterization, and machine learning </p>
-		<p> Publication record: <a href="https://dblp.org/pid/141/4409.html">DBLP</a> and 
-			<a href="https://scholar.google.fr/citations?user=axZ1vG0AAAAJ&hl=en">Google Scholar</a> </p>
-		<p> <a href="./cv.pdf">CV</a>	
-</div>
-  
-</body>
+---
+title:  Mihail Popov
+banner-image-list:
+    - url: img/1.jpg	
+    - url: img/3.jpg	
+    - url: img/2.jpg		
+---
 
-</html>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js" defer></script>
+<script src="{{ site.baseurl }}/js/lightsliderrun.js" defer></script>
+
+<div style="padding-bottom:0;" class="jumbotron">
+  <div class="container">
+    <ul id="lightSlider">
+      {% for image in page.banner-image-list %}
+      <li style="overflow:hidden">
+        <div style="height:auto; display:flex; align-item:center;">
+          <img style="width:100%; height:auto; align-self: center;" src="{{ image.url }}">
+        </div>
+      </li>
+      {% endfor %}
+      {% for image in site.static_files %}
+      {% if image.path contains 'img/banner/' %}
+      <li>
+        <img src="{{ site.baseurl }}{{ image.path }}">
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<section class="no-top-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <h1 class="section-heading" style="margin-bottom:.2em;">
+          Mihail Popov
+        </h1>
+		
+		<img src='../img/me.jpg' width="200" style="float:right;margin:0px 50px">
+		
+        <p class="lead section-lead"> Research Scientist at <a href="https://team.inria.fr/storm/">STORM</a> team, <a href="https://www.inria.fr/en">Inria</a> Bordeaux - Sud-Ouest.  </p>
+
+
+
+	<h3> Short bio </h3>
+
+	<p> I received the Ph.D. degree from the Exascale Computing Research/<a href="https://www.uvsq.fr/"> University of Versailles </a> lab in 2016 under the supervision of <a href="https://sifflez.org/">Pablo de Oliveira Castro</a> and <a href="https://www.researchgate.net/profile/William-Jalby">William Jalby</a>. 
+	After an internship in 2017 at <a href="https://www.intel.com/content/www/us/en/homepage.html"> Intel Champaign </a> in the US, I was appointed postdoctoral Researcher at the  <a href="http://www.it.uu.se/research/group/uart"> Uppsala Architecture Research Team</a> working with <a href="https://katalog.uu.se/profile/?id=N9-1278">David Black-Schaffer</a>, in Sweden.
+	In 2020, I moved to industry as a senior researcher at the <a href="https://blogs.ed.ac.uk/he-lab/"> Huawei-Edinburgh Joint Lab</a>.
+	In 2021, I joined the <a href="https://team.inria.fr/storm/">STORM</a> team at Inria Bordeaux as a tenured research scientist (ISFP). 
+	</p>
+
+
+	<h3> Research interest </h3>
+
+<p> High performance computing systems are increasingly difficult to use.
+They are massively parallel, heterogeneous, with NUMA effects, out-of-order execution, cache hierarchies, and data prefetching. 
+The resulting complexity require adapting applications to the hardware characteristics to achieve full performance and energy efficiency.  </p>
+
+<p> The software stack provides many diverse knobs to adapt an application to the hardware. 
+At compilation, different optimization passes can be selected. 
+At execution, the runtime provides an interface to control parallelism, thread placement, data placement, and workload scheduling.
+Interestingly, hardware capabilities can also adjust the system to the application (e,g, prefetch, cache, frequency).
+Therefore, achieving efficiency requires to explore a huge space of hardware and software optimizations.  </p>
+
+<p> <b> My research focuses on exploring such software and hardware optimizations, usually with machine learning. </b>  </p>
+
+
+	<h3> Contact </h3>
+
+<ul>
+  <li><b>Address:</b>  Inria Bordeaux - Sud-Ouest, 200 avenue de la vieille tour, 33405 Talence cedex, France </li>
+  <li><b>Email:</b>  <script type="text/javascript">
+var usera = 'mihail *dot* popov ',
+	userb = 'inria ',
+	userc = 'fr';
+
+    document.write( usera + '*at* ' + userb + '*dot* ' + userc);
+    //'<a href="mailto:' + user + '@' + domain + '">Email</a>'   
+</script> </li>
+</ul>
+        
+      </div>
+    </div>
+
+    
+    </div>
+</section>
