@@ -41,49 +41,59 @@ banner-image-list:
           Mihail Popov
         </h1>
 		
-		<img src="{{ site.baseurl }}/img/me.jpg" width="200" style="float:right;margin:0px 50px">
+		<img src="{{ site.baseurl }}/img/mee.jpg" width="200" style="float:right;margin:0px 50px">
 		
-        <p class="lead section-lead"> Research Scientist at <a href="https://team.inria.fr/storm/">STORM</a> team, <a href="https://www.inria.fr/en">Inria</a> Bordeaux, France.  </p>
+        <p class="lead section-lead"> Research Scientist at <a href="https://team.inria.fr/tadaam/">TADaaM</a> team, <a href="https://www.inria.fr/en">Inria</a> Bordeaux, France.  </p>
 
 
 
 	<h3> Short bio </h3>
 
 	<p> I received the Ph.D. degree from the <a href="https://www.uvsq.fr/">University of Versailles</a>/Exascale Computing Research lab in 2016 under the supervision of <a href="https://sifflez.org/">Pablo de Oliveira Castro</a> and <a href="https://www.researchgate.net/profile/William-Jalby">William Jalby</a>. 
-	After an internship in 2017 at <a href="https://www.intel.com/content/www/us/en/homepage.html"> Intel Champaign </a> in the US, I was appointed postdoctoral researcher at the  <a href="http://www.it.uu.se/research/group/uart"> Uppsala Architecture Research Team</a> in Sweden and worked with <a href="https://katalog.uu.se/profile/?id=N9-1278">David Black-Schaffer</a>.
-	In 2020, I moved to industry as a senior researcher at the <a href="https://blogs.ed.ac.uk/he-lab/"> Huawei-Edinburgh Joint Lab</a>.
-	In 2021, I joined the <a href="https://team.inria.fr/storm/">STORM</a> team at Inria Bordeaux as a tenured research scientist (ISFP). 
+	Following a research visit to <a href="https://www.intel.com/content/www/us/en/homepage.html"> Intel Champaign </a> in 2017, I was appointed postdoctoral researcher with <a href="https://katalog.uu.se/profile/?id=N9-1278">David Black-Schaffer</a> at the  <a href="http://www.it.uu.se/research/group/uart"> Uppsala Architecture Research Team</a> in Sweden.
+	In 2020, I transitioned to industry as a senior researcher at the <a href="https://blogs.ed.ac.uk/he-lab/"> Huawei-Edinburgh Joint Lab</a>.
+	In 2021, I joined <a href="https://www.inria.fr/en/inria-centre-university-bordeaux">Inria Bordeaux</a> as a tenured research scientist (ISFP). 
 	</p>
 
 
-	<h3> Research interest </h3>
+	<h3> Research interest in performance and energy optimization with AI</h3>
 
-<p> High performance computing systems are increasingly difficult to use.
-They are massively parallel, heterogeneous, with NUMA effects, out-of-order execution, cache hierarchies, and data prefetching. 
-The resulting complexity requires adapting applications to the hardware characteristics to achieve full performance and energy efficiency.  </p>
+<p> The software stack presents an array of diverse levers and controls to align applications with the unique characteristics of the hardware they run on. 
+During the compilation phase, one can select from a multitude of optimization passes, while at runtime, different interfaces enable fine-tuning of parallelism, thread placement, MPI parameters, I/O optimizations, data locality, and workload scheduling. 
+Interestingly, hardware capabilities can, in turn, adapt to the specifics of the application. 
+They include prefetching strategies, cache management, bandwidth allocation, and even core/uncore frequencies. 
+Therefore, true efficiency necessitates navigating through a vast and ever-evolving space of both hardware and software optimizations.   </p>
 
-<p> The software stack provides many diverse knobs to adapt an application to the hardware. 
-At compilation, different optimization passes can be selected. 
-At execution, the runtime provides an interface to control parallelism, thread placement, data placement, and workload scheduling.
-Interestingly, hardware capabilities can also adjust the system to the application (e,g, prefetch, cache, frequency).
-Therefore, achieving efficiency requires to explore a huge space of hardware and software optimizations.  </p>
+<p> Over the last couple of years, I have been working on the benefits and challenges of exploring such large optimization spaces. 
+In particular, I consider how to combine machine learning with static compiler-based characterization methods to guide optimization at a lower cost. 
+I also try to quantify the interconnectedness of these complex systems by highlighting the performance and energy impact from one optimization to others.   </p>
 
-<p> <b> My research focuses on exploring such software and hardware optimizations, usually with machine learning. </b>  </p>
+<p> Here are  <a href="https://docs.google.com/presentation/d/1GaFGbqa0aeueKR_scjjeBDBxrh4bgMmhbH5X4C7npZs/edit?usp=sharing"> slides </a>  summarizing my recent research on the topic as of 2024. </p>
+
+	<h3> Current goals</h3>
+
+<p> Current hardware trends lead to more complex parallel applications with hardware heterogeneity, new scalable algorithms, and combinations of parallel programming models that pose many programmability challenges. Such complexity brings:  </p>
+<ol>
+<li>an increase in the number of bugs requiring scalable debugging techniques to assist developers</li>
+ <li>challenges in fully optimizing the different computation layers (e.g., compilers, runtimes, OS, hardware parameters) to achieve full efficiency</li>
+</ol>
+
+<p> My two current goals are to harness machine-learning techniques for 1. assisted bug detection and correction, targeting hard domains such as parallel program verification with code embeddnigs and Large Language Models, and 2. fine-tuned cross-computation layers optimizations.  </p>
 
 
 	<h3> Contact </h3>
 
-<ul>
-  <li><b>Address:</b>  Inria Bordeaux - Sud-Ouest, 200 avenue de la vieille tour, 33405 Talence cedex, France </li>
-  <li><b>Email:</b>  <script type="text/javascript">
-var usera = 'mihail *dot* popov ',
-	userb = 'inria ',
+If you are a student looking for an internship or are interested in a collaboration, please contact me by email:
+
+
+<script type="text/javascript">
+var usera = 'mihail.popov',
+	userb = 'inria',
 	userc = 'fr';
 
-    document.write( usera + '*at* ' + userb + '*dot* ' + userc);
+    document.write( usera + '@' + userb + '.' + userc);
     //'<a href="mailto:' + user + '@' + domain + '">Email</a>'   
-</script> </li>
-</ul>
+</script> 
         
       </div>
     </div>
